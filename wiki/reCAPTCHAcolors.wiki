@@ -1,3 +1,5 @@
+#summary How to change reCAPTCHA colors.
+
 ==How to change reCAPTCHA colors==
 
 *Important: this method is not officially supported and may break when new versions of reCAPTCHA system will come out.*
