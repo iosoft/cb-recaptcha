@@ -58,11 +58,7 @@ class getReCAPTCHAtab extends cbTabHandler {
 		return $return;
 	}
 	
-	/**
-	* This function is called before user registration and checks if the correct security
-	* code was entered during registration application.
-	* If not - then the application fails, a popup message is displayed and the applicant must try again.
-	**/
+	/**   Registration Form Submit   **/
 	function onBeforeUserRegistration( &$row, &$rowExtras ) {
 		global $ueConfig, $mainframe, $_PLUGINS;
 				
@@ -93,9 +89,10 @@ class getReCAPTCHAtab extends cbTabHandler {
         	return;
 		}
 		
-		$_PLUGINS->_iserror = false;			// ugly bug fix of CB 1.0.2
+		$_PLUGINS->_iserror = false;	// ugly bug fix of CB 1.0.2
 	}
-
+	
+	/**   Lost Password Form-A   **/
 	function onLostPassForm( $ui ) {
 
 		$params = $this->params;
@@ -107,6 +104,7 @@ class getReCAPTCHAtab extends cbTabHandler {
 		return $return;
 	}
 	
+	/**   Lost Password Form-B   **/
 	function onLostPassFormB( $ui ) {
 
 		$params = $this->params;
@@ -120,6 +118,7 @@ class getReCAPTCHAtab extends cbTabHandler {
 		return $return;
 	}
 	
+	/**   Lost Password Form Submit   **/
 	function onBeforeNewPassword( $user_id, &$newpass, &$subject, &$message ) {
 		global $ueConfig, $mainframe, $_PLUGINS;
 		
@@ -193,7 +192,7 @@ class getReCAPTCHAtab extends cbTabHandler {
 	* @param int 1 for front-end, 2 for back-end
 	* @param array _POST data for saving edited tab content as generated with getEditTab
 	* @returns mixed : either string HTML for tab content, or false if ErrorMSG generated, or null if nothing to display
-	*/
+	
 	function getTabComponent($tab, $user, $ui, $postdata) {
 		global $mosConfig_live_site, $mosConfig_absolute_path, $database, $my;
 		
@@ -210,17 +209,17 @@ class getReCAPTCHAtab extends cbTabHandler {
 		$cbcaptcha_height = $params->get('captchaHeight', '40');
 		$cbcaptcha_chars = $params->get('captchaChars', '5');
 		$cbcaptcha_font2use = $params->get('captchaFont', '0');
-        $cbcaptcha_backgroundRGB = $params->get('captchaBackgroundRGB','255,255,255');
-        if (substr_count($cbcaptcha_backgroundRGB,',')!=2) {
-        	$cbcaptcha_backgroundRGB = '255,255,255';
+		$cbcaptcha_backgroundRGB = $params->get('captchaBackgroundRGB','255,255,255');
+		if (substr_count($cbcaptcha_backgroundRGB,',')!=2) {
+			$cbcaptcha_backgroundRGB = '255,255,255';
 		}      
-        $cbcaptcha_captchaTextRGB = $params->get('captchaTextRGB','20,40,100');
-        if (substr_count($cbcaptcha_captchaTextRGB,',')!=2) {
-        	$cbcaptcha_captchaTextRGB = '20,40,100';
-		}              
-        $cbcaptcha_captchaNoiseRGB = $params->get('captchaNoiseRGB','100,120,180');
-        if (substr_count($cbcaptcha_captchaNoiseRGB,',')!=2) {
-        	$cbcaptcha_captchaNoiseRGB = '100,120,180';              
+		$cbcaptcha_captchaTextRGB = $params->get('captchaTextRGB','20,40,100');
+		if (substr_count($cbcaptcha_captchaTextRGB,',')!=2) {
+			$cbcaptcha_captchaTextRGB = '20,40,100';
+		}
+		$cbcaptcha_captchaNoiseRGB = $params->get('captchaNoiseRGB','100,120,180');
+		if (substr_count($cbcaptcha_captchaNoiseRGB,',')!=2) {
+			$cbcaptcha_captchaNoiseRGB = '100,120,180';              
 		}
 		$captchaGenerator = new CaptchaSecurityImages();
 		$captchaGenerator->setfont($cbcaptcha_font2use);
@@ -245,6 +244,6 @@ class getReCAPTCHAtab extends cbTabHandler {
 		$_SESSION['security_code'] = $code;
 
 		return null;
-	}
+	}*/
 } // end class getReCAPTCHAtab.
 ?>
