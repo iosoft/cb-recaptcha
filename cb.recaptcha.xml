@@ -3,7 +3,7 @@
 	<name>CB reCAPTCHA</name>
 	<author>Mr. Ayan Debnath (aka: iosoft)</author>
 	<creationDate>2008-07-30</creationDate>
-	<copyright>© 2008 Future iOsoft Technology, INDIA</copyright>
+	<copyright>(C) 2008 Future iOsoft Technology, INDIA</copyright>
 	<license>http://creativecommons.org/licenses/by-nc-nd/2.5/in/</license>
 	<authorEmail>futureiosoft@yahoo.co.uk</authorEmail>
 	<authorUrl>www.gigahertz.net.in</authorUrl>
@@ -15,14 +15,14 @@
 		<filename>index.html</filename>
 	</files>
     <params>
-    	<param name="@spacer" type="spacer" default="1.0 (compatible with CB 1.0.2 and above)" label="Version:" description="" />
+    	<param name="@spacer" type="spacer" default="1.0.0 (compatible with CB 1.0.2 and above)" label="Version:" description="" />
     	<param name="@spacer" type="spacer" default="2008-07-30" label="Release Date:" description="" />
     	<param name="@spacer" type="spacer" default="This plugin was created by Mr. Ayan Debnath (aka: iosoft)." label="Credits:" description="" />
 		<param name="@spacer" type="spacer" default="This plugin is distributed under a Creative Commons Noncommercial-No Derivative Works 2.5 India License." label="License:" description="" />
         
 		<param name="@spacer" type="spacer" default="" label=" " description="" />
         
-		<param name="@spacer" type="spacer" default="reCAPTCHA Generation Parameters" label=" " description="" />
+		<param name="@spacer" type="spacer" default="reCAPTCHA Generation Parameters" label=" " description="get the Keys from - http://recaptcha.net/api/getkey" />
 			<param name="recaptchaPubKey" type="text" size="50" default="" label="Public Key"  description="Enter reCAPTCHA Public Key"  />
 			<param name="recaptchaPrvKey" type="text" size="50" default="" label="Private Key" description="Enter reCAPTCHA Private Key" />
 		
@@ -71,7 +71,7 @@
 
 	</params>
     <tabs>
-    	<tab name="CB reCAPTCHA" description="This CB Captcha Tab placeholder is used to move captcha image placement in relation to other CB tabs that contain registration fields." class="getcaptchaTab" fields="0">
+    	<tab name="CB reCAPTCHA" description="This CB Captcha Tab placeholder is used to move captcha image placement in relation to other CB tabs that contain registration fields." class="getReCAPTCHAtab" fields="0">
 			<params>
 			</params>
 			<fields>
