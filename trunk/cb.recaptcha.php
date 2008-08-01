@@ -39,7 +39,16 @@ class getReCAPTCHAtab extends cbTabHandler {
 		require_once('recaptchalib.php'); /**    reCAPTCHA Library   **/
 		
 		$params = $this->params;
-		return recaptcha_get_html($params->get('recaptchaPubKey','')); /**   Generating CORE reCAPTCHA form   **/
+
+		if($params->get('recaptchaTheme','red')=='custom')
+		{		
+		   $style = "\n<style type=\"text/css\"> .recaptchatable .recaptcha_image_cell, #recaptcha_table { background-color:".$params->get('recaptchaBackgroundRGB','#156c94')." !important; } #recaptcha_table { border-color: ".$params->get('recaptchaBorderRGB','#ffffff')." !important; } #recaptcha_response_field { border-color: #000000 !important;background-color:".$params->get('recaptchaTextBackRGB','#ffffff')." !important; }</style>";
+		   $style.= "\n<script type=\"text/javascript\">var RecaptchaOptions = {theme : 'clean', lang : '" . $params->get('recaptchaLang','en') . "'};</script>\n";
+		}
+		else
+		   $style = "\n<script type=\"text/javascript\">var RecaptchaOptions = {theme : '" . $params->get('recaptchaTheme','red') . "', lang : '" . $params->get('recaptchaLang','en') . "'};</script>\n";
+		
+		return $style . recaptcha_get_html($params->get('recaptchaPubKey','')) . "<br />&nbsp;"; /**   Generating CORE reCAPTCHA form   **/
 	}
 	
 	/**   Generates the HTML to display the registration tab/area   **/

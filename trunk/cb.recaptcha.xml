@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cbinstall version="1.0.3" type="plugin" group="user">
+<cbinstall version="1.0.0" type="plugin" group="user">
 	<name>CB reCAPTCHA</name>
 	<author>Mr. Ayan Debnath (aka: iosoft)</author>
 	<creationDate>2008-07-30</creationDate>
@@ -7,7 +7,7 @@
 	<license>http://creativecommons.org/licenses/by-nc-nd/2.5/in/</license>
 	<authorEmail>futureiosoft@yahoo.co.uk</authorEmail>
 	<authorUrl>www.gigahertz.net.in</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0</version>
 	<description>Provides CB with a reCAPTCHA Tab that during the registration process generates a security image along with verification logic.</description>
 	<files>
 		<filename plugin="cb.recaptcha">cb.recaptcha.php</filename>
@@ -15,7 +15,7 @@
 		<filename>index.html</filename>
 	</files>
     <params>
-    	<param name="@spacer" type="spacer" default="1.0.0 (compatible with CB 1.0.2 and above)" label="Version:" description="" />
+    	<param name="@spacer" type="spacer" default="1.5 (compatible with CB 1.0.2 and above)" label="Version:" description="" />
     	<param name="@spacer" type="spacer" default="2008-07-30" label="Release Date:" description="" />
     	<param name="@spacer" type="spacer" default="This plugin was created by Mr. Ayan Debnath (aka: iosoft)." label="Credits:" description="" />
 		<param name="@spacer" type="spacer" default="This plugin is distributed under a Creative Commons Noncommercial-No Derivative Works 2.5 India License." label="License:" description="" />
@@ -43,15 +43,14 @@
 				<option value="red">Red</option>
 				<option value="white">White</option>
 				<option value="blackglass">Black Glass</option>
-				<option value="clean">Clean</option>
+				<option value="clean">Transparent</option>
 				<option value="custom">Custom</option>
 			</param>
 		
 		<param name="@spacer" type="spacer" default="reCAPTCHA Custom-Theme" label=" " description="" />
-			<param name="recaptchaBackgroundRGB" type="text" size="25" default="255,255,255" label="Background color"      description="reCAPTCHA widget Background color. Enter color composition (in Red, Green, Blue dimensions - 0 to 255)" />
-			<param name="recaptchaBorderRGB"     type="text" size="25" default="255,255,255" label="Border color"          description="reCAPTCHA widget Border color. Enter color composition (in Red, Green, Blue dimensions - 0 to 255)" />
-			<param name="recaptchaTextForeRGB"   type="text" size="25" default="255,255,255" label="Input Text color"      description="reCAPTCHA widget Input Text color. Enter color composition (in Red, Green, Blue dimensions - 0 to 255)" />
-			<param name="recaptchaTextBackRGB"   type="text" size="25" default="255,255,255" label="Input Text Back color" description="reCAPTCHA widget Input Text Background color. Enter color composition (in Red, Green, Blue dimensions - 0 to 255)" />
+			<param name="recaptchaBackgroundRGB" type="text" size="12" default="#156c94" label="Background color"      description="reCAPTCHA widget Background color." />
+			<param name="recaptchaBorderRGB"     type="text" size="12" default="#ffffff" label="Border color"          description="reCAPTCHA widget Border color." />
+			<param name="recaptchaTextBackRGB"   type="text" size="12" default="#ffffff" label="Input Text Back color" description="reCAPTCHA widget Input Text Background color." />
 
         <param name="@spacer" type="spacer" default="" label=" " description="" />
 		
@@ -64,11 +63,10 @@
 				<option value="1">Yes</option>
 				<option value="0">No</option>
 			</param>
-			<param name="captchaEmailUser" type="radio" default="1" label="Include reCAPTCHA in User Emailing Process" description="Specify Yes to include Captcha image during user emailing process.">
+			<param name="captchaEmailUser" type="radio" default="0" label="Include reCAPTCHA in User Emailing Process" description="Specify Yes to include Captcha image during user emailing process.">
 				<option value="1">Yes</option>
 				<option value="0">No</option>
 			</param>
-
 	</params>
     <tabs>
     	<tab name="CB reCAPTCHA" description="This CB Captcha Tab placeholder is used to move captcha image placement in relation to other CB tabs that contain registration fields." class="getReCAPTCHAtab" fields="0">
