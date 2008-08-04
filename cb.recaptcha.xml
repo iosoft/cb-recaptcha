@@ -15,7 +15,7 @@
 		<filename>index.html</filename>
 	</files>
     <params>
-    	<param name="@spacer" type="spacer" default="1.5 (compatible with CB 1.0.2 and above)" label="Version:" description="" />
+    	<param name="@spacer" type="spacer" default="1.0.0 (compatible with CB 1.0.2 and above)" label="Version:" description="" />
     	<param name="@spacer" type="spacer" default="2008-07-30" label="Release Date:" description="" />
     	<param name="@spacer" type="spacer" default="This plugin was created by Mr. Ayan Debnath (aka: iosoft)." label="Credits:" description="" />
 		<param name="@spacer" type="spacer" default="This plugin is distributed under a Creative Commons Noncommercial-No Derivative Works 2.5 India License." label="License:" description="" />
@@ -67,6 +67,7 @@
 				<option value="1">Yes</option>
 				<option value="0">No</option>
 			</param>
+
 	</params>
     <tabs>
     	<tab name="CB reCAPTCHA" description="This CB Captcha Tab placeholder is used to move captcha image placement in relation to other CB tabs that contain registration fields." class="getReCAPTCHAtab" fields="0">
