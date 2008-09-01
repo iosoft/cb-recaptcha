@@ -9,7 +9,7 @@
 * @license http://creativecommons.org/licenses/by-nc-nd/2.5/in/
 **/
 
-defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.' );
+defined( '_VALID_MOS' ) or defined('_JEXEC') or die( 'Direct Access to this location is not allowed.' );
 
 if(isset($_PLUGINS)) 
 {
