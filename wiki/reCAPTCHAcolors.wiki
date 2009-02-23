@@ -1,4 +1,5 @@
 #summary How to change reCAPTCHA colors.
+#labels Phase-Implementation
 
 ==How to change reCAPTCHA colors==
 
