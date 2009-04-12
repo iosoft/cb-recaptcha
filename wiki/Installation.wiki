@@ -1,1 +1,20 @@
+#summary How to install CB-reCaptcha plugin ?
 #labels Phase-Deploy
+
+==How to install CB-reCaptcha plugin ?==
+
+Many people makes a common mistake.
+This plug-in is not a _Joomla Component_ nor _Module_ nor _Mambot_. It is a Plug-in for _Community Builder_ and hence it have to be installed through _Community Builder_.
+
+
+*STEPS:*
+ * Open your Joomla Admin Console.
+
+ * goto: Components (main menu) -> Community Builder -> plugin Management.
+[http://www.musiker.nu/objectstudio/newsmailer/images/fbfiles/images/cb_plugin.jpg]
+
+ * Install the Plug-in.
+
+ * Now, *Publish* the plug-in and Configure it properly by setting the Public-Private Keys.
+
+DONE
