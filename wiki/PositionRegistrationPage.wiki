@@ -1,5 +1,5 @@
 #summary How to change reCaptcha position in Registration page ?
-#labels Featured
+#labels Featured,Phase-Design
 
 ==How can I change the Captcha position in the Registration page ?==
 
