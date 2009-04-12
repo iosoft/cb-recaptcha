@@ -17,4 +17,5 @@ This plug-in is not a _Joomla Component_ nor _Module_ nor _Mambot_. It is a Plug
 
  * Now, *Publish* the plug-in and Configure it properly by setting the Public-Private Keys.
 
+
 DONE
