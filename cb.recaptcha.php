@@ -1,5 +1,6 @@
 <?php
 /**
+*
 * reCAPTCHA Tab Class for handling CB Registrations
 * @version $Id: cb.recaptcha.php 2008-07-30 iosoft $
 * @package Community Builder
@@ -7,6 +8,7 @@
 * @author Mr. Ayan Debnath (aka: iosoft)
 * @copyright © 2008 Future iOsoft Technology, INDIA
 * @license http://creativecommons.org/licenses/by-nc-nd/2.5/in/
+*
 **/
 
 defined( '_VALID_MOS' ) or defined('_JEXEC') or die( 'Direct Access to this location is not allowed.' );
