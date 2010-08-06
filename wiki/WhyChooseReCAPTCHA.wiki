@@ -5,7 +5,7 @@
 
 Why you should use *CB reCAPTCHA* for _Community Builder_, instate of normal _CB Captcha_ plug-in ?
 
-= Details =
+== Compare ==
 
 ||   || *Features*  || *CB Captcha 2.x* || *CB reCAPTCHA* ||
 || 1 || _GD Library_ || Must Needed || Not Needed ||
@@ -21,4 +21,3 @@ Why you should use *CB reCAPTCHA* for _Community Builder_, instate of normal _CB
 
 
 *Hope, there are enough reasons to get CB reCAPTCHA*
-
