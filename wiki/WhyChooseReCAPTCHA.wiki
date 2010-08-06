@@ -1,9 +1,7 @@
 #summary Why you should use reCAPTCHA for Community Builder ?
 #labels Featured,Phase-Support
 
-= Introduction =
-
-Why you should use *CB reCAPTCHA* for _Community Builder_, instate of normal _CB Captcha_ plug-in ?
+===Why you should use *CB reCAPTCHA* for _Community Builder_, instate of normal _CB Captcha_ plug-in ?===
 
 == Compare ==
 
