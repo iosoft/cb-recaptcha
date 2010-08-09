@@ -15,7 +15,8 @@
 || 7 || _Contact Form security_ || Only for CB Contact Form || Both Joomla Contact Form and CB Contact Form ||
 || 8 || _Developer Support_ || Even Subscribed member doesn't get proper support || You just wont need any. ||
 || 9 || _Size_ || 784 KB (unzipped) || 20KB (unzipped) ||
-|| 10 || _Price_|| €35. or $46. || FREE || 
+|| 10 || _Price_|| €35. or $46. || FREE ||
+|| 11 || _One very HOT Feature_|| X || It will be implemented in Final version. || 
 
 
-*Hope, there are enough reasons to get CB reCAPTCHA*
+*Hope, there are enough reasons to get CB reCAPTCHA.*
