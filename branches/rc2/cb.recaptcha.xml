@@ -7,7 +7,7 @@
 	<license>http://creativecommons.org/licenses/by-nc-nd/2.5/in/</license>
 	<authorEmail>futureiosoft@yahoo.co.uk</authorEmail>
 	<authorUrl>www.gigahertz.net.in</authorUrl>
-	<version>1.0</version>
+	<version>2.0</version>
 	<description>Provides CB with a reCAPTCHA Tab that during the registration process generates a security image along with verification logic.</description>
 	<files>
 		<filename plugin="cb.recaptcha">cb.recaptcha.php</filename>
