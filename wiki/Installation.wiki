@@ -12,7 +12,6 @@ This plug-in is not a _Joomla Component_ nor _Module_ nor _Mambot_. It is a Plug
 
  * goto: Components (main menu) -> Community Builder -> plugin Management.
 [http://www.musiker.nu/objectstudio/newsmailer/images/fbfiles/images/cb_plugin.jpg]
-
  * Install the Plug-in.
 
  * Now, *Publish* the plug-in.
