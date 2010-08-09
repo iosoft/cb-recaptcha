@@ -1,4 +1,6 @@
+#summary Internet Explorer 6 (only) Bug-Fix and Limitation
 #labels Phase-Design,Phase-Implementation
+
 ==Internet Explorer 6 (only) Bug-Fix and Limitation==
 [http://andhrayouth.com/uploads/1265218253-Google.jpg]
 
