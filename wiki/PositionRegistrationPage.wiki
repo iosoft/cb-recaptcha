@@ -16,7 +16,7 @@ Here is the simple procedure to configure it. Just Follow this :
 It will open the the Property Page.
 
  * Notice the field name: *Registration ordering* (default value: 10)
- * Change the value to higher value (like 50 or 100) and TEST.
+ * Change the value to higher value (like 20 or 50 or 100) and TEST.
  * Save
 
 Thats All :)
