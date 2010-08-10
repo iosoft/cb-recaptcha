@@ -36,7 +36,6 @@ if(isset($_PLUGINS))
 	/* CB-CONTACT FORM */
 	$_PLUGINS->registerFunction( 'onAfterEmailToContactForm', 	'onAfterEmailToContactForm',	'getReCAPTCHAtab' ); /* NEW */
 	$_PLUGINS->registerFunction( 'onBeforeSendEmailToContact', 	'onBeforeSendEmailToContact',	'getReCAPTCHAtab' ); /* NEW */
-	
 }
 
 class getReCAPTCHAtab extends cbTabHandler {

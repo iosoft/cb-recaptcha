@@ -15,17 +15,17 @@
 		<filename>index.html</filename>
 	</files>
     <params>
-    	<param name="@spacer" type="spacer" default="2.0.0 (compatible with CB 1.0.2 and above)" label="Version:" description="" />
+    	<param name="@spacer" type="spacer" default="2.0.0 (Compatible with CB 1.0.2 and above)" label="Version:" description="" />
     	<param name="@spacer" type="spacer" default="2010-08-06" label="Release Date:" description="" />
-    	<param name="@spacer" type="spacer" default="This plugin was created by Mr. Ayan Debnath (aka: iosoft)." label="Credits:" description="" />
-		<param name="@spacer" type="spacer" default="This plugin is distributed under a Creative Commons Noncommercial-No Derivative Works 2.5 India License." label="License:" description="" />
+    	<param name="@spacer" type="spacer" default="Plug-in developed by Mr. Ayan Debnath (aka: iosoft)" label="Credits:" description="" />
+		<param name="@spacer" type="spacer" default="This plugin is distributed under a Creative Commons NonCommercial-NoDerivative Works 2.5 India License." label="License:" description="" />
         
 		<param name="@spacer" type="spacer" default="" label=" " description="" />
         
 		<param name="@spacer" type="spacer" default="reCAPTCHA Security Keys" label=" " description="Get your OWN Keys from - http://www.google.com/recaptcha" />
 			<param name="recaptchaPubKey" type="text" size="50" default="6Le8TwQAAAAAAPBx8BOqky4-CIoyRcyZHfsJQni0" label="Public Key"  description="Enter reCAPTCHA Public Key"  />
 			<param name="recaptchaPrvKey" type="text" size="50" default="6Le8TwQAAAAAAJkCQqKURctwg0EB2XWoANRvXgnQ" label="Private Key" description="Enter reCAPTCHA Private Key" />
-		
+			
 		<param name="@spacer" type="spacer" default="" label=" " description="" />
 		
 		<param name="@spacer" type="spacer" default="reCAPTCHA Style Parameters" label=" " description="" />
