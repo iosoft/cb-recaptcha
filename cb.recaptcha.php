@@ -49,13 +49,11 @@ class getReCAPTCHAtab extends cbTabHandler {
 	
 	/**   Generates HTML code for reCAPTCHA   **/ /* Need Modification to support IE 6/7 : SPAN added */
 	function _getHTMLcaptcha() {
-		global $_PLUGINS;
+		//global $_PLUGINS;
 		
 		$params = $this->params;
 		require_once('recaptchalib.php'); /**    reCAPTCHA Library   **/
-		
-		if(!session_id())session_start();
-		
+
 		$supportIE6 = "<!--[if IE]><script type=\"text/javascript\">onload=function(){if(document.getElementById('recaptcha_widget_div')==null)location.reload(true);}</script><![endif]-->";
 
 		if($params->get('recaptchaTheme','red')=='custom')
@@ -67,23 +65,19 @@ class getReCAPTCHAtab extends cbTabHandler {
 		   $style = "\n<script type=\"text/javascript\">var RecaptchaOptions = {theme : '" . $params->get('recaptchaTheme','red') . "', lang : '" . $params->get('recaptchaLang','en') . "'};</script>\n";
 		
 		return "<span id=\"reCaptchaBlock\">" . $style . recaptcha_get_html($params->get('recaptchaPubKey','')) . "\n</span><br />&nbsp;" . $supportIE6; /**   Generating CORE reCAPTCHA form   **/
-		
-		//$publickey = "6Le8TwQAAAAAAPBx8BOqky4-CIoyRcyZHfsJQni0"; // you got this from the signup page
-		//return (recaptcha_get_html($publickey));
-		
 	}
 	
 	/**   Generates the HTML to display the registration tab/area   **/ /* Checked */
 	function getDisplayRegistration($tab, $user, $ui) {
-		global $_PLUGINS;
+		//global $_PLUGINS;
 		
 		$params=$this->params;
         if(!$params->get('captchaRegistration',1))return;
 		
-		$return = "<tr>";
-		$return .= "<td class=\"titleCell\">" . htmlspecialchars(_UE_CAPTCHA_Label) . ":</td>";
-		$return .= "<td class=\"fieldCell\">" . $this->_getHTMLcaptcha() . "</td>";
-		$return .= "</tr>";
+		$return = "<tr class=\"tr_recpatcha\">";
+		$return.= "<td class=\"titleCell\">" . htmlspecialchars(_UE_CAPTCHA_Label) . ":</td>";
+		$return.= "<td class=\"fieldCell\">" . $this->_getHTMLcaptcha() . "</td>";
+		$return.= "</tr>";
 		
 		return $return;
 	}
@@ -116,7 +110,7 @@ class getReCAPTCHAtab extends cbTabHandler {
 		$params=$this->params;
         if(!$params->get('captchaRegistration',1))return;
 		
-		$_PLUGINS->_iserror=false;	// ugly bug fix for CB 1.0.2
+		$_PLUGINS->_iserror=false;	// Bug fix for CB 1.0.2
 	}
 
 	
@@ -126,7 +120,7 @@ class getReCAPTCHAtab extends cbTabHandler {
 	
 	/**   Lost Password Form   **/ /* Checked */
 	function onLostPassForm( $ui ) {
-		global $_PLUGINS;
+		//global $_PLUGINS;
 
 		$params=$this->params;
         if(!$params->get('captchaNewPassword',1))return;
@@ -135,18 +129,14 @@ class getReCAPTCHAtab extends cbTabHandler {
 		return $return;
 	}
 	
-	/**   Lost Password Form-B   **/ /* Uncommented : $return = array....  */ /* Checked */
+	/**   Lost Password Form-B   **/ /* Checked */
 	function onLostPassFormB( $ui ) {
-		global $_PLUGINS;
+		//global $_PLUGINS;
 
 		$params=$this->params;
         if(!$params->get('captchaNewPassword',1))return;
-		
-		//$captchaInput = "<input class=\"inputbox\" type=\"text\" name=\"".$this->_getPagingParamName("captcha")."\" mosReq=\"1\" mosLabel=\"". htmlspecialchars(_UE_CAPTCHA_Label) . ":\" value=\"\" size=\"20\" />";
-		//$return = array( 0 => htmlspecialchars(_UE_CAPTCHA_Label) . ':', 1 => $captchaInput );
-		
+				
 		$return = array( 0 => htmlspecialchars(_UE_CAPTCHA_Label) . ':', 1 => $this->_getHTMLcaptcha());
-		
 		return $return;
 	}
 	
@@ -198,7 +188,7 @@ class getReCAPTCHAtab extends cbTabHandler {
 	
 	/**   Generates the HTML to display security image on forgotten email form   **/ /* Checked */
 	function onAfterEmailUserForm() {
-		global $_PLUGINS;
+		//global $_PLUGINS;
 		
 		$params=$this->params;
         if(!$params->get('captchaEmailUser',1))return;
@@ -231,16 +221,12 @@ class getReCAPTCHAtab extends cbTabHandler {
 
 	/* Form */
 	function onAfterEmailToContactForm() {
-		global $_PLUGINS;
+		//global $_PLUGINS;
 		
 		$params=$this->params;
 		if(!$params->get('captchaContactForm',1))return;
-		
-		$return = "";
-		$return .= $this->_getHTMLcaptcha();
-		$return .= "";
-		
-		return $return;
+			
+		return $this->_getHTMLcaptcha();
 	}
 	
 	function onBeforeSendEmailToContact() {
