@@ -1,115 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<cbinstall version="1.0" type="plugin" group="user" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:../../../../../validation/ahawow.xsd">
-
-	<name>CB reCAPTCHA</name>
-
-	<author>Mr. Ayan Debnath (aka: iosoft)</author>
-
-	<creationDate>2021-01-21</creationDate>
-
-	<copyright>© 20021 Future iOsoft Technology, INDIA. All rights reserved.</copyright>
-
-	<license>https://creativecommons.org/licenses/by-nc-nd/2.5/in/</license>
-
-	<authorEmail>futureiosoft@yahoo.co.uk</authorEmail>
-
-	<authorUrl>www.gigahertz.net.in</authorUrl>
-
-	<version>2.0</version>
-
-	<description>Provides Community Builder with a reCAPTCHA Tab that during the registration process generates a security image along with verification logic.</description>
-
-	<files>
-
-		<filename plugin="cb.recaptcha">cb.recaptcha.php</filename>
-
-		<filename>index.html</filename>
-
-	</files>
-
-    <params>
-
-    	<param name="@spacer" type="spacer" default="2.0 (compatible with CB 2.0.0 and above)" label="Version:" description="" />
-
-    	<param name="@spacer" type="spacer" default="2021-01-21" label="Release Date:" description="" />
-
-    	<param name="@spacer" type="spacer" default="This plugin was created by Mr. Ayan Debnath (aka: iosoft)." label="Credits:" description="" />
-
-		<param name="@spacer" type="spacer" default="This plugin is distributed under a Creative Commons Noncommercial-No Derivative Works 2.5 India License." label="License:" description="" />
-
-        
-
-		<param name="@spacer" type="spacer" default="" label=" " description="" />
-		
-		<param name="@spacer" type="spacer" default="reCAPTCHA Generation Parameters" label=" " description="get the Keys from - https://www.google.com/recaptcha/admin/" />
-			<param name="public_key" type="text" size="100" default="" label="PLG_RECAPTCHA_PUBLIC_KEY_LABEL"  description="PLG_RECAPTCHA_PUBLIC_KEY_DESC" required="true" />
-			<param name="private_key" type="text" size="100" default="" label="PLG_RECAPTCHA_PRIVATE_KEY_LABEL" description="PLG_RECAPTCHA_PRIVATE_KEY_DESC" />
-
-		
-
-        <param name="@spacer" type="spacer" default="reCAPTCHA Placement Parameters" label=" " description="" />
-
-			<param name="captchaRegistration" type="radio" default="1" label="Include reCAPTCHA in Registration Process" description="Specify Yes to include reCAPTCHA during registration.">
-
-				<option value="1">Yes</option>
-
-				<option value="0">No</option>
-
-			</param>
-
-			<param name="captchaNewPassword" type="radio" default="1" label="Include reCAPTCHA in New Password Request Process" description="Specify Yes to include reCAPTCHA during password reset.">
-
-				<option value="1">Yes</option>
-
-				<option value="0">No</option>
-
-			</param>
-
-			<param name="captchaEmailUser" type="radio" default="0" label="Include reCAPTCHA in User Emailing Process" description="Specify Yes to include reCAPTCHA during user emailing process.">
-
-				<option value="1">Yes</option>
-
-				<option value="0">No</option>
-
-			</param>
-
-	</params>
-
-    <tabs>
-
-    	<tab name="CB reCAPTCHA" description="This CB reCAPTCHA Tab placeholder is used to move reCAPTCHA placement in relation to other CB tabs that contain registration fields." class="getReCAPTCHAtab" fields="0">
-
-			<params>
-
-			</params>
-
-			<fields>
-
-			</fields>
-
-		</tab>
-
-    </tabs>
-
-	<database>
-
-	</database>
-
-    <install>
-
-    	<queries>
-
-    	</queries>
-
-    </install>
-
-    <uninstall>
-
-        <queries>
-
-    	</queries>
-
-    </uninstall>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0" type="plugin" group="user" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:../../../../../validation/ahawow.xsd">
+	<name>CB reCAPTCHA</name>
+	<author>Mr. Ayan Debnath (aka: iosoft)</author>
+	<creationDate>2008-07-30</creationDate>
+	<copyright>© 20021 Future iOsoft Technology, INDIA. All rights reserved.</copyright>
+	<license>https://creativecommons.org/licenses/by-nc-nd/2.5/in/</license>
+	<authorEmail>futureiosoft@yahoo.co.uk</authorEmail>
+	<authorUrl>www.gigahertz.net.in</authorUrl>
+	<version>2.1</version>
+	<description>Provides Community Builder with a reCAPTCHA Tab that during the registration process generates a security image along with verification logic.</description>
+	<files>
+		<filename plugin="cb.recaptcha">cb.recaptcha.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<params>
+		<param name="@spacer" type="spacer" default="2.0 (compatible with CB 2.0.0 and above)" label="Version:" description="" />
+ 		<param name="@spacer" type="spacer" default="2021-01-21" label="Release Date:" description="" />
+		<param name="@spacer" type="spacer" default="This plugin was created by Mr. Ayan Debnath (aka: iosoft)." label="Credits:" description="" />
+		<param name="@spacer" type="spacer" default="This plugin is distributed under a Creative Commons Noncommercial-No Derivative Works 2.5 India License." label="License:" description="" />
+		<param name="@spacer" type="spacer" default="" label=" " description="" />
+		<param name="@spacer" type="spacer" default="reCAPTCHA Generation Parameters" label=" " description="get the Keys from - https://www.google.com/recaptcha/admin/" />
+		<param name="public_key" type="text" size="100" default="" label="PLG_RECAPTCHA_PUBLIC_KEY_LABEL"  description="PLG_RECAPTCHA_PUBLIC_KEY_DESC" required="true" />
+		<param name="private_key" type="text" size="100" default="" label="PLG_RECAPTCHA_PRIVATE_KEY_LABEL" description="PLG_RECAPTCHA_PRIVATE_KEY_DESC" />
+		<param name="@spacer" type="spacer" default="reCAPTCHA Placement Parameters" label=" " description="" />
+		<param name="captchaRegistration" type="radio" default="1" label="Include reCAPTCHA in Registration Process" description="Specify Yes to include reCAPTCHA during registration.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="captchaNewPassword" type="radio" default="1" label="Include reCAPTCHA in New Password Request Process" description="Specify Yes to include reCAPTCHA during password reset.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="captchaEmailUser" type="radio" default="0" label="Include reCAPTCHA in User Emailing Process" description="Specify Yes to include reCAPTCHA during user emailing process.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<tabs>
+	    	<tab name="CB reCAPTCHA" description="This CB reCAPTCHA Tab placeholder is used to move reCAPTCHA placement in relation to other CB tabs that contain registration fields." class="getReCAPTCHAtab" fields="0">
+			<params>
+			</params>
+			<fields>
+			</fields>
+		</tab>
+	</tabs>
+	<database>
+	</database>
+	<install>
+		<queries>
+		</queries>
+	</install>
+	<uninstall>
+        	<queries>
+	    	</queries>
+	</uninstall>
 </cbinstall>

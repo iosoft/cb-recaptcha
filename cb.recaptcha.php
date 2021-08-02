@@ -150,7 +150,7 @@ class getReCAPTCHAtab extends cbTabHandler {
 	}
 	
     /** Generates the HTML to display the registration tab/area **/
-    function getDisplayRegistration($tab, $user, $ui) {
+    function getDisplayRegistration($tab, $user, $ui, $postdata=null) {
         $params = $this->params();
 		
         if (!$params->get('captchaRegistration', 1)) return;
